@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./assets/css/form.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main">
+        <!-- Sign up form -->
+      
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            
+            <div class="container">
+                <div class="close-icon">
+                    <a href="Home.html"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="signin-content"> 
+                    
+                    <div class="signin-image">
+                        <figure><img src="./assets/img/signin.png" alt="sing up image"></figure>
+                        <a href="signup.html" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                      
+                        <h2 class="form-title">Sign In</h2>
+                        <form method="POST" class="register-form" id="login-form">
+
+                            <div class="form-group">
+                                <label for="your_cid"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="your_cid" id="your_cid" placeholder="CID No"/>
+                                <small></small>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="your_password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_password" id="your_password" placeholder="Password"/>
+                                <small></small>
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Sign In"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./js/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="signup">
+      <div class="container">
+        <div class="close-icon">
+          <a href="Home.html"><i class="fas fa-times"></i></a>
+        </div>
+        <div class="signup-content">
+          <div class="signup-form">
+            <h2 class="form-title">Sign Up</h2>
+            <form method="POST" class="form" id="signup-form">
+              <div class="input-control">
+                <label for="name"
+                  ><i class="zmdi zmdi-account material-icons-name"></i
+                ></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <label for="your_cid"
+                  ><i class="zmdi zmdi-account material-icons-name"></i
+                ></label>
+                <input
+                  type="number"
+                  name="your_cid"
+                  id="cidNumber"
+                  placeholder="CID No"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <label for="your_contact"
+                  ><i class="zmdi zmdi-account material-icons-name"></i
+                ></label>
+                <input
+                  type="number"
+                  name="your_contact"
+                  id="contactNumber"
+                  placeholder="Contact No"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                <input
+                  type="password"
+                  name="pass"
+                  id="password"
+                  placeholder="Password"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <label for="re-pass"
+                  ><i class="zmdi zmdi-lock-outline"></i
+                ></label>
+                <input
+                  type="password"
+                  name="re_pass"
+                  id="passwordConfirm"
+                  placeholder="confirm-Password"
+                />
+                <small></small>
+              </div>
+              <div class="input-control">
+                <input
+                  type="checkbox"
+                  name="agree-term"
+                  id="agree-term"
+                  class="agree-term"
+                />
+                <label for="agree-term" class="label-agree-term"
+                  ><span><span></span></span>I agree all statements in
+                  <a href="#" class="term-service">Terms of service</a></label
+                >
+              </div>
+              <div class="input-control form-button">
+                <input
+                  type="submit"
+                  name="signup"
+                  id="signup"
+                  class="form-submit"
+                  value="Register"
+                />
+                <small></small>
+              </div>
+            </form>
+          </div>
+          <div class="signup-image">
+            <figure>
+              <img src="assets/img/signup.png" alt="sign up image" />
+            </figure>
+            <a href="login.html" class="signup-image-link"
+              >I am already a member</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script type="module" src="./js/signup.js"></script>
+  </body>
+</html>
