@@ -37,14 +37,7 @@ exports.getUser = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
-exports.deactivate = async (req, res) => {
-    try {
-        const user = await User.findByIdAndUpdate(req.params.id, req.body);
-        res.json({ data: user, status: "success" })
-    } catch (err) {
-        res.status(500).json({ error: err.message })
-    }
-}
+
 exports.updateUser = async (req, res, next) => {
     try {
         const filteredBody = filterObj(req.body, 'name', 'email');

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>customize Token</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+
+    <!-- Your custom CSS styles -->
+    <link rel="stylesheet" type="text/css" href="../Dashboard/css/chamber.css">
+</head>
+<style>
+ 
+.token-form {
+  background-color: #1B5D74;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  /* max-width: 400px; */
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+</style>
+
+<body>
+
+    <!-- Top Bar -->
+    <div id="topbar" class="bg-black p-4"
+        style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+        <!-- Patient in Top Left Corner -->
+        <div style="position: absolute; top: 0; left: 0;">
+            <p style="margin-left: 300px; padding-top: 15px; font-size: 20px;">Assign Token</p>
+        </div>
+
+        <!-- Logout Button -->
+        <button class="btn btn-danger" style="position: absolute; top: 8px; right: 3px;">
+            Logout
+        </button>
+    </div>
+
+
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="bg-black">
+        <div class="position-fixed">
+            <ul class="list-unstyled text-center">
+                <li>
+                    <a href="dashboard.html" class="btn btn-link text-white" style="font-size: 23px;">Dashboard</a>
+                </li>
+                <li>
+                    <a class="dash" href="patient.html" class="btn btn-link text-white">
+                        <img width="33" height="33"
+                            src="https://img.icons8.com/external-fauzidea-detailed-outline-fauzidea/64/000000/external-patients-pandemic-fauzidea-detailed-outline-fauzidea.png"
+                            alt="external-patients-pandemic-fauzidea-detailed-outline-fauzidea"
+                            style="filter: brightness(0) invert(1); margin-right: 20px;">
+                        User Details
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a class="dash" href="doctor.html" class="btn btn-link text-white"
+                        style="display: flex; align-items: center;">
+                        <img width="30" height="30"
+                            src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-doctor-plastic-surgery-justicon-lineal-justicon.png"
+                            alt="external-doctor-plastic-surgery-justicon-lineal-justicon"
+                            style="filter: brightness(0) invert(1); margin-left: 18px; margin-right: 25px;">
+                        Assign Token
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a class="dash" href="chamber.html" class="btn btn-link text-white">
+                        <img width="35" height="35" src="https://img.icons8.com/ios/50/000000/two-beds.png"
+                            alt="two-beds"
+                            style="filter: brightness(0) invert(1); margin-left: 10px; margin-right: 18px;">
+                        Customize Users
+                    </a>
+                </li>
+                <br>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="content-column text-white">
+                    <div class="half-part">
+                        <div class="text-wrapper-8">Users:</div>
+                        <div class="text-wrapper-7" id="noOF_User"></div>
+                    </div>
+                    <div class="half-part">
+                        <img width="43" height="43"
+                            src="https://img.icons8.com/external-fauzidea-detailed-outline-fauzidea/64/000000/external-patients-pandemic-fauzidea-detailed-outline-fauzidea.png"
+                            alt="external-patients-pandemic-fauzidea-detailed-outline-fauzidea"
+                            style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="content-column text-white">
+
+                    <div class="half-part">
+                        <div class="text-wrapper-8">Admins:</div>
+                        <div class="text-wrapper-7"></div>
+                    </div>
+                    <div class="half-part">
+                        <img width="50" height="48" src="https://img.icons8.com/ios/50/000000/two-beds.png"
+                            alt="two-beds" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="content-column text-white">
+
+                    <div class="half-part">
+                        <div class="text-wrapper-8">Departments:</div>
+                        <div class="text-wrapper-7">15</div>
+                    </div>
+                    <div class="half-part">
+                        <img width="40" height="40" src="https://img.icons8.com/pastel-glyph/64/000000/hospital--v3.png"
+                            alt="hospital--v3" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="col-md-9">
+            <div class="chamber-row">
+                <!-- Add chamber details as rows here -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="token-form">
+                            <form method="post" class="form" id="token-form">
+                                <div class="form-group">
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" name="date" required /><br /><br />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sickness">Department:</label>
+                                    <select id="sickness" name="sickness" required>
+                                        <option value="">Select Department</option>
+                                        <option value="Anesthesiology">Anesthesiology</option>
+                                        <option value="Dentistry">Dentistry</option>
+                                        <option value="Dermatology">Dermatology</option>
+                                        <option value="ENT">ENT</option>
+                                        <option value="Forensic Medicine">Forensic Medicine</option>
+                                        <option value="Gynae/Obs">Gynae/Obs</option>
+                                        <option value="Tradational">Tradational</option>
+                                        <option value="Ophthalmology">Ophthalmology</option>
+                                        <!-- <option value="Orthopaedic">Orthopaedic</option>
+                                        <option value="Paediatrics">Paediatrics</option> -->
+                                        <option value="Psychiatry">Psychiatry</option>
+                                        <option value="Surgical">Surgical</option>
+                                        <option value="Pathology">Pathology</option>
+                                        <option value="CT unit">CT unit</option>
+                                        <option value="MRI">MRI</option>
+                                        <option value="Ultrasonography">Ultrasonography</option>
+                                        <!-- <option value="Ultrasound unit">Ultrasound unit</option> -->
+                                        <option value="X-Ray">X-Ray</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="noOfToken">Number of Token:</label>
+                                    <input type="number" id="noOF_Token" name="numberOfToken" required /><br /><br />
+                                </div>
+                                <div>
+                                    <input type="submit" id="token-reg" name="token" class="form-submit"
+                                        value="Assign" /><br /><br />
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Include Bootstrap JS -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+                <script type="module" src="../Dashboard/js/script.js"></script>
+
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
